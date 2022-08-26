@@ -1,3 +1,8 @@
-From tomcat:8-jre8
+From openjdk:11
 
-COPY ./crmapp.jar /usr/local/tomcat/webapps 
+COPY target/crmapp-0.0.1.jar /
+
+WORKDIR /
+
+CMD ["java", "-jar", "crmapp-0.0.1.jar"]
+
